@@ -13,7 +13,7 @@
 }
 
 .background {
-    background: black;
+    background: #134f5c;
     background-blend-mode: darken;
     background-size: cover;
 }
@@ -62,12 +62,12 @@
 }
 
 .firstsection {
-    background-color: green;
+    background-color: #d0e0e3;
     height: 400px;
 }
 
 .secondsection {
-    background-color: blue;
+    background-color: #d0e0e3;
     height: 400px;
 }
 
@@ -75,7 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: lightcoral;
     max-width: 80%;
     margin: auto;
     height: 80%;

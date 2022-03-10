@@ -5,8 +5,52 @@
             <title>
                 Simple web Development Template
             </title>
+            <link type="text/css" rel="stylesheet" href="file:///C:/Users/crypt/source/repos/Assignment_LookAndFeel/css/main.css" />
+            <link type="text/css" rel="stylesheet" href="C:\Users\91938\source\repos\Assignment_LookAndFeel/css/home.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <link type="text/css" rel="stylesheet" href="C:\Users\91938\source\repos\Assignment_LookAndFeel/home.css" />
+            <style>
+                .dropbtn {
+                    background-color: #04AA6D;
+                    color: white;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                }
+
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                }
+
+                    .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+
+                        .dropdown-content a:hover {
+                            background-color: #ddd;
+                        }
+
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                    background-color: #3e8e41;
+                }
+            </style>
         </head>
 
         <body>
@@ -15,9 +59,17 @@
                     <div class="logo">
                         <img src="logo.png">
                     </div>
-                    <li><a href="#web">Web Technology</a></li>
-                    <li><a href="#program">C Programming</a></li>
-                    <li><a href="#course">Courses</a></li>
+                    <li><a href="#web"><button class="btn dropbtn"><i class="fa fa-home"></i> Home</button></a></li>
+                    <li>
+                        <a href="#program"><button class="btn dropbtn"><i class="fa fa-bars"></i> Menu</button></a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+
+                    </li>
+                    <li><a href="#course"><button class="btn btn-primary dropbtn" type="button">Log in</button></a></li>
                 </ul>
 
                 <div class="rightNav">
@@ -30,24 +82,11 @@
                 <div class="box-main">
                     <div class="firstHalf">
                         <h1 class="text-big" id="web">
-                            Web Technology
+                            
                         </h1>
 
                         <p class="text-small">
-                            HTML stands for HyperText Markup
-                            Language. It is used to design
-                            web pages using a markup language.
-                            HTML is the combination of Hypertext
-                            and Markup language. Hypertext
-                            defines the link between the web
-                            pages. A markup language is used
-                            to define the text document within
-                            tag which defines the structure of
-                            web pages. HTML is a markup language
-                            that is used by the browser to
-                            manipulate text, images, and other
-                            content to display it in the required
-                            format.
+                        foood fanda
                         </p>
 
 
@@ -59,19 +98,10 @@
                 <div class="box-main">
                     <div class="secondHalf">
                         <h1 class="text-big" id="program">
-                            C Programming
+                           KIng
                         </h1>
                         <p class="text-small">
-                            C is a procedural programming language.
-                            It was initially developed by Dennis
-                            Ritchie as a system programming
-                            language to write operating system.
-                            The main features of C language include
-                            low-level access to memory, simple set
-                            of keywords, and clean style, these
-                            features make C language suitable for
-                            system programming like operating system
-                            or compiler development.
+                          food description
                         </p>
 
 
