@@ -45,3 +45,17 @@ html {
   color: red;
   text-decoration: none;
 }
+
+.container-fluid {
+    background-image: url('C:\Users\crypt\source\repos\Assignment_LookAndFeel\img\a.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.row {
+
+ 
+   margin:50px;
+}
+h3{
+    text-align:left;
+}
