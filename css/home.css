@@ -13,7 +13,11 @@
 }
 
 .background {
+<<<<<<< HEAD
     background: black;
+=======
+    background: #134f5c;
+>>>>>>> 5050860f2dcc8222dfbf598dc55df826e70f0b1e
     background-blend-mode: darken;
     background-size: cover;
 }
@@ -62,12 +66,20 @@
 }
 
 .firstsection {
+<<<<<<< HEAD
     background-color: green;
+=======
+    background-color: #d0e0e3;
+>>>>>>> 5050860f2dcc8222dfbf598dc55df826e70f0b1e
     height: 400px;
 }
 
 .secondsection {
+<<<<<<< HEAD
     background-color: blue;
+=======
+    background-color: #d0e0e3;
+>>>>>>> 5050860f2dcc8222dfbf598dc55df826e70f0b1e
     height: 400px;
 }
 
@@ -75,7 +87,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     color: black;
+=======
+    color: lightcoral;
+>>>>>>> 5050860f2dcc8222dfbf598dc55df826e70f0b1e
     max-width: 80%;
     margin: auto;
     height: 80%;
