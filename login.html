@@ -15,11 +15,12 @@
         function checkLogin() {
             var username = document.getElementById("exampleInputEmail1").value;
             var password = document.getElementById("exampleInputPassword1").value;
-            if ((username == "Aj" || username == "Prashanth" || username = "Pranay") && password == "123456") {
+            if ((username == "Aj" || username == "Prashanth" || username =="Pranay") && password == "123456") {
                 return true;
             }
             else {
                 alert("Please check your password");
+                return false;
             }
         }
     </script>
