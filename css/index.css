@@ -24,7 +24,7 @@
 .header-right {
     float: right;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .header a {
         float: none;
         display: block;
@@ -33,6 +33,10 @@
 
     .header-right {
         float: none;
+    }
+    table {
+        display: block;
+        text-align: left;
     }
 }
 * {
@@ -50,3 +54,10 @@ body {
     display: inline-block;
     vertical-align: middle;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+  }

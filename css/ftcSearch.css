@@ -1,6 +1,5 @@
 .search-container {
-    float: left;
-    padding-left: 550px;
+    padding: 0px 20px; 
   }
   
 input[type=text] {
