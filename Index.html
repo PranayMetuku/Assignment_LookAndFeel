@@ -3,15 +3,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="jquery.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 
 <body>
     <div class="header" style="background-color: #134f5c;">
-        <img src="./seal.jpg" alt="logo" style="float: left; height: 50px" />
+        <img src="./img/seal.jpg" alt="logo" style="float: left; height: 50px" />
         <a href="index.html" class="logo" style="color:white">Federal Trade Commission</a>
         <div class="header-right">
             <a class="active" href="index.html" style="color:white"><i class="fa fa-home"></i>Home</a>
@@ -32,13 +34,16 @@
                     <h2>
                         Do Not Call (DNC)
                     </h2>
-                    <img src="./graph1.PNG" alt="Graph" style="width: -webkit-fill-available; height: -webkit-fill-available" />
+                    <!-- <img src="./img/graph1.PNG" alt="Graph" style="width: -webkit-fill-available; height: -webkit-fill-available" /> -->
+                    <div class="DncGraph" id="myDncBarChart" style="width:100%; max-width:600px; height:500px;"></div>
+                    <div class="DncGraph" id="myDncPieChart" style="width:100%; max-width:600px; height:500px;"></div>
                     <p class="text-small">
                         The Do Not Call (DNC) Reported Calls Data API endpoint provides data every weekday about Do Not Call and robocall complaints reported to the Federal Trade Commission. This data consists of information reported by consumers, including the telephone number originating the unwanted call, the date the complaint was created, the time the call was made, the consumer's city and state locations reported, the subject of the call, and whether the call was a robocall. None of the information about the reported calls is verified. This data is typically updated each weekday by about noon Eastern time.
                     </p>
                     <h2>
                         Hart-Scott-Rodino (HSR) Early Termination Notices
                     </h2>
+                    <div id="myHsrBarChart" style="width:100%; max-width:600px; height:500px;"></div>
                     <p class="text-small">
                         Under the Hart-Scott-Rodino (HSR) Act, parties to certain large mergers and acquisitions must file premerger notification and wait for government review. The parties may not close their deal until the waiting period outlined in the HSR Act has passed, or the government has granted early termination of the waiting period. The FTC provides daily updates of deals that receive early termination. - Adapted from Premerger Notification and the Merger Review Process.
                     </p>
@@ -49,5 +54,72 @@
     <footer class="background">
     </footer>
 </body>
+
+<script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+    var DncBarData = google.visualization.arrayToDataTable([
+      ['Month', '#Complaints'],
+      ['January',432404],
+      ['February',472083],
+      ['March',522618],
+      ['April',448675],
+      ['May',399809],
+      ['June',426695],
+      ['July',360049],
+      ['August',379627],
+      ['September',351997],
+      ['October',314252],
+      ['November',271558],
+      ['December',232174]
+    ]);
+
+    var DncPieData = google.visualization.arrayToDataTable([
+        ['ComplaintType', '#Complaints'],
+        ['RoboCall', 18209236],
+        ['Live Caller', 7839404]
+    ]);
+
+    var HsrBarData = google.visualization.arrayToDataTable([
+        ['Year','#NoOfTransactions'],
+        [2011,1450],
+        [2012,1429],
+        [2013,1326],
+        [2014,1663],
+        [2015,1801],
+        [2016,1832],
+        [2017,2052],
+        [2018,2111],
+        [2019,2089],
+        [2020,1637]
+    ]);
+    
+    var DncBarOptions = {
+      title:'Do Not Call Complaints over 2021'
+    };
+    var DncPieOptions = {
+        title: 'Complaints By Call Type',
+        is3D: true
+    }
+
+    var HsrBarOptions = {
+        title: 'HSR Merger Transactions Reported Fiscal Years 2011-2020',
+        hAxis: {title: 'Fiscal Year'},
+        vAxis: {title: 'Number of Transactions'},
+        legend: 'none'
+    };
+
+    var lineChart = new google.visualization.ColumnChart(document.getElementById('myHsrBarChart'));
+    lineChart.draw(HsrBarData, HsrBarOptions);
+    
+    var barChart = new google.visualization.ColumnChart(document.getElementById('myDncBarChart'));
+    barChart.draw(DncBarData, DncBarOptions);
+
+    var pieChart = new google.visualization.PieChart(document.getElementById('myDncPieChart'));
+    pieChart.draw(DncPieData, DncPieOptions);
+    }
+    </script>
 
 </html>
